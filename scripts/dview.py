@@ -10,15 +10,15 @@
 # main script
 
 if len(argv) < 2:
-  raise StandardError, "Syntax: dview.py --n 512 dump.1 ..."
+    raise Exception("Syntax: dview.py --n 512 dump.1 ...")
 
 if argv[1] == "--n":
-  n = int(argv[2])
-  files = ' '.join(argv[3:])
+    n = int(argv[2])
+    files = " ".join(argv[3:])
 else:
-  n = 512
-  files = ' '.join(argv[1:])
+    n = 512
+    files = " ".join(argv[1:])
 
 d = dump(files)
-g = gl(d,n)
+g = gl(d, n)
 v = vcr(g)

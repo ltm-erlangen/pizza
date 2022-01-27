@@ -4,7 +4,7 @@
 
 lg = log("files/log.obstacle")
 g = gnu()
-p = plotview(lg,g)
+p = plotview(lg, g)
 
 p.select(1)
 p.select(6)
@@ -15,4 +15,4 @@ p.no(2)
 p.file("tmp.plotview")
 p.save()
 
-print "all done ... type CTRL-D to exit Pizza.py"
+print("all done ... type CTRL-D to exit Pizza.py")

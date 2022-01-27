@@ -17,4 +17,3 @@ information can be be accessed from within Pizza.py by typing "??" or
 Many of the scripts can also be run directly from Python (without
 running Pizza.py), so long as the Pizza.py tools (Python files) it
 needs to import (e.g. log.py) can be found by Python.
-

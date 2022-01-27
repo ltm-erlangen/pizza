@@ -17,5 +17,3 @@ By submitting this pull request, I agree, that my contribution will be included 
 **Further Information, Files, and Links**
 
 <!--Put any additional information here, attach relevant text or image files, and URLs to external sites (e.g. DOIs or webpages)-->
-
-

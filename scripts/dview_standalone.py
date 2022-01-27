@@ -10,23 +10,26 @@
 # enable script to run from Python directly w/out Pizza.py
 
 import sys
-from dump import dump
 
 # w/out Pizza.py these lines need to come before import of gl tool
-import Tkinter
-tkroot = Tkinter.Tk()
-tkroot.withdraw()
+import tkinter
 
+from dump import dump
 from gl import gl
 from vcr import vcr
-if not globals().has_key("argv"): argv = sys.argv
+
+tkroot = tkinter.Tk()
+tkroot.withdraw()
+
+if "argv" not in globals():
+    argv = sys.argv
 
 # main script
 
 if len(argv) < 2:
-  raise StandardError, "Syntax: dview.py dump.1 ..."
+    raise Exception("Syntax: dview.py dump.1 ...")
 
-files = ' '.join(argv[1:])
+files = " ".join(argv[1:])
 
 d = dump(files)
 g = gl(d)

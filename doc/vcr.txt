@@ -1,12 +1,12 @@
-"Pizza.py WWW Site"_pws - "Pizza.py Documentation"_pd - "Pizza.py Tools"_pc :c
+"Pizza.py WWW Site"_pws - "Pizza.py Documentation"_pd - "Pizza.py Tools"_pc: c
 
-:link(pws,http://pizza.sandia.gov)
-:link(pd,Manual.html)
-:link(pc,Section_tools.html)
+: link(pws, http: // pizza.sandia.gov)
+: link(pd, Manual.html)
+: link(pc, Section_tools.html)
 
-:line
+: line
 
-vcr tool :h3
+vcr tool: h3
 
 [Purpose:]
 
@@ -21,7 +21,7 @@ tool which draws the individual images in OpenGL windows
 The vcr constructor creates the GUI.  Note that multiple OpenGL
 windows can be run by the same GUI so that multiple views of the same
 data set can be manipulated simultaneously (or views of different data
-sets so long as they have the same # of snapshots).
+sets so long as they have the same  # of snapshots).
 
 The view can be controlled by the GUI widgets or by invoking the tool
 methods: play(), stop(), axis(), etc.  The frame slider can be dragged
@@ -43,22 +43,22 @@ animation.
 
 [Usage:]
 
-v = vcr(gl1,gl2,...)       start vcr GUI with one or more gl windows
-v.add(gl)                  add a gl window to vcr GUI :pre
+v=vcr(gl1, gl2, ...)       start vcr GUI with one or more gl windows
+v.add(gl)                  add a gl window to vcr GUI: pre
 
-Actions (same as GUI widgets): :pre
+Actions (same as GUI widgets):: pre
 
 v.first()		   go to first frame
 v.prev()                   go to previous frame
 v.back()                   play backwards from current frame to start
-v.stop()         	   stop on current frame		
+v.stop()         	   stop on current frame
 v.play()                   play from current frame to end
 v.next()		   go to next frame
-v.last()		   go to last frame :pre
+v.last()		   go to last frame: pre
 
 v.frame(31)    	           set frame slider
 v.delay(0.4)     	   set delay slider
-v.q(5)          	   set quality slider :pre
+v.q(5)          	   set quality slider: pre
 
 v.xaxis()		   view scene from x axis
 v.yaxis()  		   view scene from y axis
@@ -67,18 +67,18 @@ v.box()		 	   toggle bounding box
 v.axis() 	           toggle display of xyz axes
 v.norm()	           recenter and resize the view
 v.ortho()	           toggle ortho/perspective button
-v.reload()           	   reload all frames from gl viewer data files :pre
+v.reload()           	   reload all frames from gl viewer data files: pre
 
 v.clipxlo(0.2)             clip scene at x lo fraction of box
 v.clipxhi(1.0)             clip at x hi
 v.clipylo(0.2)             clip in y
 v.clipyhi(1.0)
 v.clipzlo(0.2)             clip in z
-v.clipzhi(1.0) :pre
+v.clipzhi(1.0): pre
 
 v.save()		   save current scene to file.png
 v.file("image")		   set filename
-v.saveall()		   toggle save-all checkbox :pre
+v.saveall()		   toggle save-all checkbox: pre
 
 [Related tools:]
 

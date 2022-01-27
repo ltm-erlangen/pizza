@@ -11,20 +11,22 @@
 # enable script to run from Python directly w/out Pizza.py
 
 import sys
-from plotview import plotview
+
 from gnu import gnu
 from matlab import matlab
-if not globals().has_key("argv"): argv = sys.argv
+from plotview import plotview
+
+if "argv" not in globals():
+    argv = sys.argv
 
 # main script
 
 if len(argv) != 3:
-  raise StandardError, "Syntax: plot.py gnu/matlab file"
+    raise Exception("Syntax: plot.py gnu/matlab file")
 
 style = argv[1]
 file = argv[2]
 
 v = vec(file)
-exec "plot = %s()" % style
-p = plotview(v,plot)
-
+exec("plot = %s()" % style)
+p = plotview(v, plot)

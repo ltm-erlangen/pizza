@@ -70,8 +70,8 @@ region		void2 sphere 20 7 0 3
 delete_atoms	region void2
 Deleted 37 atoms, new total = 767
 
-fix		7 flow indent 100 4 10 4 0 0 0 0 
-fix		8 flow indent 100 4 20 7 0 0 0 0 
+fix		7 flow indent 100 4 10 4 0 0 0 0
+fix		8 flow indent 100 4 20 7 0 0 0 0
 fix		9 all enforce2d
 
 # Run
@@ -81,7 +81,7 @@ thermo		1000
 thermo_modify	temp mobile
 
 #dump		1 all atom 100 dump.obstacle
-dump		1 all custom 100 dump.custom tag type x y z vx vy 
+dump		1 all custom 100 dump.custom tag type x y z vx vy
 
 run		25000
 Memory usage per processor = 1.06157 Mbytes

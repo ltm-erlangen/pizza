@@ -4,9 +4,9 @@
 
 dm = dump("files/dump.peptide.only")
 b = bdump("files/dump.bond")
-b.map(1,"id",2,"type",3,"atom1",4,"atom2")
+b.map(1, "id", 2, "type", 3, "atom1", 4, "atom2")
 dm.extra(b)
 g = gl(dm)
 v = vcr(g)
 
-print "all done ... type CTRL-D to exit Pizza.py"
+print("all done ... type CTRL-D to exit Pizza.py")

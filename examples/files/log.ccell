@@ -42,7 +42,7 @@ Memory usage in Mbyte/proc (ave/max/min)
   bins  = 0 0 0
   surfs = 0 0 0
   total = 0 0 0
-Step Time prey predator food 
+Step Time prey predator food
 0 0 1000 1000 1000
 4692 1.00009 597 1578 1000
 7799 2.00172 310 1163 1000
@@ -171,7 +171,7 @@ Move statistics (total & per-step):
 Reaction statistics (total & per-step):
   overlaps    = 0 0
   reactions   = 297937 1
-  count of each reaction: (1 98790) (2 99267) (3 99880) 
+  count of each reaction: (1 98790) (2 99267) (3 99880)
 Memory usage in Mbyte/proc (ave/max/min)
   parts = 0 0 0
   bins  = 0 0 0
@@ -181,4 +181,3 @@ Equivalance map of species & type
   map prey 1
   map predator 2
   map food 3
-

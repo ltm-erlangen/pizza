@@ -1,20 +1,20 @@
-"Pizza.py WWW Site"_pws - "Pizza.py Documentation"_pd - "Pizza.py Tools"_pc :c
+"Pizza.py WWW Site"_pws - "Pizza.py Documentation"_pd - "Pizza.py Tools"_pc: c
 
-:link(pws,http://pizza.sandia.gov)
-:link(pd,Manual.html)
-:link(pc,Section_tools.html)
+: link(pws, http: // pizza.sandia.gov)
+: link(pd, Manual.html)
+: link(pc, Section_tools.html)
 
-:line
+: line
 
-olog tool :h3
+olog tool: h3
 
 [Purpose:]
 
-Read other log files (ChemCell, SPPARKS, SPARTA) and extract time-series data.
+Read other log files(ChemCell, SPPARKS, SPARTA) and extract time-series data.
 
 [Description:]
 
-Read one or more log files from other programs (besides LAMMPS) and
+Read one or more log files from other programs(besides LAMMPS) and
 combine their species statistical data into long, named vectors
 (versus time).  The vectors can be used in Python for further
 processing and plotting, or they can be output to a file.
@@ -40,7 +40,7 @@ argument is specified, then a single file should be specified as the
 1st argument, and it is assumed to contain data for multiple runs,
 which are averaged.
 
-The nvec, nlen, and names values give the # of vectors, their length,
+The nvec, nlen, and names values give the  # of vectors, their length,
 and names.  The get() method returns one of more vectors as a Python
 list.  The write() method outputs the numeric vectors to a file.
 
@@ -49,22 +49,23 @@ list.  The write() method outputs the numeric vectors to a file.
 o = olog("file1")                    read in one or more log files
 o = olog("log1 log2.gz")             can be gzipped
 o = olog("file*")                    wildcard expands to multiple files
-o = olog("log.spparks","Time")       2nd arg = start string for time section
-o = olog("log.cell","",0)            3rd arg = average all runs :pre
+o = olog("log.spparks", "Time")       2nd arg = start string for time section
+o = olog("log.cell", "", 0)            3rd arg = average all runs: pre
 
-  incomplete and duplicate thermo entries are deleted
-  if specify 2nd arg, it delimits a time section
-  no 2nd arg or empty string, use default = "Step"
-  if specify any 3rd arg, average all runs, assume all start at time 0 :pre
+incomplete and duplicate thermo entries are deleted
+if specify 2nd arg, it delimits a time section
+no 2nd arg or empty string, use default = "Step"
+if specify any 3rd arg, average all runs, assume all start at time 0:
+    pre
 
 nvec = o.nvec                        # of vectors of thermo info
 nlen = o.nlen                        length of each vectors
 names = o.names                      list of vector names
-a,b,... = o.get("A","B",...)         return one or more vectors of values
+a, b, ... = o.get("A", "B", ...) return one or more vectors of values
 o.write("file.txt")	 	     write all vectors to a file
-o.write("file.txt","A","B",...)      write listed vectors to a file :pre
+o.write("file.txt", "A", "B", ...)      write listed vectors to a file: pre
 
-  get and write allow abbreviated (uniquely) vector names :pre
+get and write allow abbreviated(uniquely) vector names: pre
 
 [Related tools:]
 

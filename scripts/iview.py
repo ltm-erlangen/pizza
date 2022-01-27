@@ -10,11 +10,15 @@
 # enable script to run from Python directly w/out Pizza.py
 
 import sys
+
 from animate import animate
-if not globals().has_key("argv"): argv = sys.argv
+
+if "argv" not in globals():
+    argv = sys.argv
 
 # main script
 # this could be done with one-line alias in shell start-up file
 
-if len(argv) < 2: raise StandardError, "Syntax: iview.py files  ..."
-a = animate(' '.join(argv[1:]))
+if len(argv) < 2:
+    raise Exception("Syntax: iview.py files  ...")
+a = animate(" ".join(argv[1:]))

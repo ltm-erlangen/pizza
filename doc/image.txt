@@ -1,12 +1,12 @@
-"Pizza.py WWW Site"_pws - "Pizza.py Documentation"_pd - "Pizza.py Tools"_pc :c
+"Pizza.py WWW Site"_pws - "Pizza.py Documentation"_pd - "Pizza.py Tools"_pc: c
 
-:link(pws,http://pizza.sandia.gov)
-:link(pd,Manual.html)
-:link(pc,Section_tools.html)
+: link(pws, http: // pizza.sandia.gov)
+: link(pd, Manual.html)
+: link(pc, Section_tools.html)
 
-:line
+: line
 
-image tool :h3
+image tool: h3
 
 [Purpose:]
 
@@ -16,7 +16,7 @@ View and manipulate images.
 
 The image tool can be used to display image files or convert them to
 other formats via the ImageMagick tools (or alternate tools if
-specified in the DEFAULTS.py file).
+                                         specified in the DEFAULTS.py file).
 
 The image constructor creates a GUI to view a set of image files as a
 palette of thumbnail-size images.  Each thumbnail can be clicked on to
@@ -40,10 +40,10 @@ image0012.svg plot0012.eps combine0012.png".  For this to work, the
 the 3 arguments does not have a wildcard, one "montage" command is
 issued using all 3 arguements.
 
-Image files can be in any format (PNG, GIF, JPG, etc) recognized by
-the Python Image Library (PIL) installed in your Python or by
-ImageMagick.  Various Pizza.py visualization tools (raster, deja,
-rasmol, etc) create such image files.  If a particular image format
+Image files can be in any format(PNG, GIF, JPG, etc) recognized by
+the Python Image Library(PIL) installed in your Python or by
+ImageMagick.  Various Pizza.py visualization tools(raster, deja,
+                                                   rasmol, etc) create such image files.  If a particular image format
 fails to load, your PIL installation was linked without support for
 that format.  Rebuild PIL, and follow the install instructions
 included in its top directory.
@@ -52,30 +52,30 @@ included in its top directory.
 
 i = image("my1.gif my2.gif")    display thumbnails of matching images
 i = image("*.png *.gif")        wildcards allowed
-i = image("*.png *.gif",0)      2nd arg = sort filenames, 0 = no sort, def = 1
+i = image("*.png *.gif", 0)      2nd arg = sort filenames, 0 = no sort, def = 1
 i = image("")	   		blank string matches all image suffixes
-i = image()			no display window opened if no arg :pre
+i = image()			no display window opened if no arg: pre
 
-  image suffixes for blank string = *.png, *.bmp, *.gif, *.tiff, *.tif
+ image suffixes for blank string = *.png, *.bmp, *.gif, *.tiff, *.tif
   click on a thumbnail to view it full-size
-  click on thumbnail again to remove full-sized version :pre
+   click on thumbnail again to remove full-sized version: pre
 
-i.view("*.png *.gif")	        display thumbnails of matching images :pre
+i.view("*.png *.gif")	        display thumbnails of matching images: pre
 
-  view arg is same as constructor arg :pre
+   view arg is same as constructor arg: pre
 
-i.convert("image*.svg","new*.png")                      each SVG file to PNG
-i.convert("image*.svg","new*.jpg","-quality 50")        3rd arg is switch
-i.convert("image*.png","movie.mpg")                     all PNGs to MPG movie
-i.convert("image*.png","movie.mpg","-resize 128x128")   3rd arg is switch
-i.montage("","image*.png","plot*.png","two*.png")       image + plot = two
-i.montage("-geometry 512x512","i*.png","new.png")       1st arg is switch :pre
+i.convert("image*.svg", "new*.png")                      each SVG file to PNG
+i.convert("image*.svg", "new*.jpg", "-quality 50")        3rd arg is switch
+i.convert("image*.png", "movie.mpg")                     all PNGs to MPG movie
+i.convert("image*.png", "movie.mpg", "-resize 128x128")   3rd arg is switch
+i.montage("", "image*.png", "plot*.png", "two*.png")       image + plot = two
+i.montage("-geometry 512x512", "i*.png", "new.png")       1st arg is switch: pre
 
-  convert with 2 wildcard args loops over 1st set of files to make 2nd set
+ convert with 2 wildcard args loops over 1st set of files to make 2nd set
   convert with not all wildcard args will issue single convert command
-  montage with all wildcard args loops over 1st set of files,
-    combines with one file from other sets, to make last set of files
-  montage with not all wildcard args will issue single montage command :pre
+   montage with all wildcard args loops over 1st set of files,
+     combines with one file from other sets, to make last set of files
+    montage with not all wildcard args will issue single montage command: pre
 
 [Related tools:]
 
